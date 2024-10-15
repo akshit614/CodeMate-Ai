@@ -1,5 +1,4 @@
 const {GoogleGenerativeAI} = require("@google/generative-ai");
-const { model } = require("mongoose");
 
 const api_Key = process.env.API_KEY;
 const genAi = new GoogleGenerativeAI(api_Key)
@@ -9,5 +8,5 @@ const geminiModel = genAi.getGenerativeModel({
 })
 
 module.exports = {
-    GeminiModel:model
+    GeminiModel:geminiModel
 }
