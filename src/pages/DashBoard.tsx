@@ -17,7 +17,7 @@ const DashBoard = () => {
           {
             Array(10).fill(null).map((item,key) => {
               return <Link to={`/code/${item}`} key={key} className=' justify-between px-4 py-3 w-full border rounded-lg flex items-center'>
-                <h1 className='font-bold text-lg'>Lorem, ipsum dolor sit amet consectetur adipisicing jasdf j fsj gsdr wertert </h1>
+                <h1 className='font-bold'>Lorem, ipsum dolor sit amet consectetur adipisicing jasdf j fsj gsdr wertert </h1>
                 <button className='outline-none flex gap-x-2 items-center text-blue-600'>Read <FaArrowRight/></button>
                 </Link>
             })
