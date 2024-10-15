@@ -11,7 +11,7 @@ const Header = () => {
         <li>About</li>
         <li>Contact</li>
         <li>
-          <Link to={'/code'} className='bg-gray-900 text-white rounded-full px-4 py-2 transition duration-300 ease-in-out hover:bg-black hover:shadow-[0_0_10px_3px_rgba(255,255,0,1)]'> Try Now ! </Link>
+          <Link  to={'/code'} className='bg-gray-900 text-white rounded-full px-4 py-2 transition duration-300 ease-in-out hover:bg-black hover:shadow-[0_0_10px_3px_rgba(255,255,0,1)]'> Try Now ! </Link>
         </li>
       </ul>
     </nav>
