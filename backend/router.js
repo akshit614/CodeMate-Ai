@@ -3,6 +3,8 @@ const { GeminiModel } = require("./DB/gemini.config");
 const { HistoryModel } = require("./DB");
 const router = express.Router()
 
+const error =(msg,status,res)=>res.status(status).json({error:msg})
+
 router.post('/generate', async (req,res) => {
     const {input} = req.body;
 

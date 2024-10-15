@@ -4,7 +4,7 @@ import {
 import App from "./App";
 import DashBoard from "./pages/DashBoard";
 import CodingPage from "./pages/CodingPage";
-import PreviousCodePage from "./pages/PreviousCodePage";
+import {PreviousCodePage} from "./pages/PreviousCodePage";
   
   
 export const router = createBrowserRouter([
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
                 Component : CodingPage
             },
             {
-                path : "/code:id",
+                path : "/code/:id",
                 Component : PreviousCodePage
             }
         ]
