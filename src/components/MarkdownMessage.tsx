@@ -28,7 +28,7 @@ const MarkdownMessage = (props:MarkdownMessageProps) => {
   return (
     <>
     <div className='px-8 py-10'>
-      <div >{
+      {
         props.input && <h1 className='text-2xl font-bold'>Prompt : {props.input}</h1>
         }</div>
         <article
@@ -36,7 +36,7 @@ const MarkdownMessage = (props:MarkdownMessageProps) => {
           dangerouslySetInnerHTML={{__html:md.render(props.output)}}        
         >
         </article>
-    </div>
+    
     </>
   )
 }

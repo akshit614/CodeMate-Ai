@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         Component: App,
         children : [
             {
-                path : "/",
+                path : "",
                 Component : DashBoard
             },
             {

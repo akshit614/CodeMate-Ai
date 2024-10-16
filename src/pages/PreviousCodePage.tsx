@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import MarkdownMessage from '../Components/MarkdownMessage'
+import MarkdownMessage from '../components/MarkdownMessage'
 import { AxiosClient } from '../utils/axios'
 import { useParams } from 'react-router-dom'
 import LoaderComponent from './LoaderComponent'
@@ -11,7 +11,7 @@ export const PreviousCodePage = () => {
   input:string,
   output:string
   }
-const [data,setData] = useState<Data>({
+  const [data,setData] = useState<Data>({
  
   input:'',
   output:''
@@ -21,12 +21,21 @@ const params= useParams<{id:string}>()
 
 const fetchData = async()=>{
   
-  const request = await AxiosClient.get("/code/"+params.id)
-  const data = await request.data;
-  console.log(data);
-  
-  setData(data)
-  setLoading(false)
+  try {
+    const request = await AxiosClient.get("/code/" + params.id);
+    const responseData = request.data;
+    console.log('API Response:', responseData);
+
+    // Ensure `output` is a valid string before passing it to setData
+    setData({
+      input: responseData.prompt || 'No input provided',  
+      output: typeof responseData.output === 'string' ? responseData.output : 'No output available', 
+    });
+    setLoading(false);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    setLoading(false);
+  }
 }
 
 useEffect(()=>{

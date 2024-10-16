@@ -15,12 +15,12 @@ router.post('/generate', async (req,res) => {
     const prompt = `${input} in markdown with detailed explanation and with notes`
 
     const result = await GeminiModel.generateContent(prompt)
-    const ai_output = result.response.text()
+    const ai_output = await result.response.text()
 
     await HistoryModel.create({
-        input,
-        ai_output,
-        prompt
+        input : input,
+        output : ai_output,
+        prompt : prompt
     })
 
     res.json({
