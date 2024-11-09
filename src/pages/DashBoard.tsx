@@ -28,10 +28,11 @@ const DashBoard = () => {
       <div className="prose">
         <h1 className='text-blue-900'>
           Welcome to Code Mate 👋
-        </h1>
+        </h1 >
+        <h4 className ="px-9">Get your needed code snippets now with CodeMate !</h4>
       </div>
       <div>
-        <h1 className='text-lg py-5'>Previous queries  </h1>
+        <h1 className='text-lg py-5'>Previous searched queries  </h1>
         <div className="flex flex-col  gap-y-4 ">
           {
             data && data.length>0 && data.slice().reverse().map((item,key) => {
