@@ -34,7 +34,7 @@ const DashBoard = () => {
         <h1 className='text-lg py-5'>Previous queries  </h1>
         <div className="flex flex-col  gap-y-4 ">
           {
-            data && data.length>0 && data.map((item,key) => {
+            data && data.length>0 && data.slice().reverse().map((item,key) => {
               return <Link to={`/code/${item._id}`} key={key} className=' justify-between px-4 py-3 w-full border rounded-lg flex items-center'>
                 <h1 className='font-bold'>{item.input}</h1>
                 <button className='outline-none flex gap-x-2 items-center text-blue-600'>Read <FaArrowRight/></button>
