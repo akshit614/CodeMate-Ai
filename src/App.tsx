@@ -5,7 +5,7 @@ export default function App() {
   return (
     <>
     <Header />
-    <div className="px-20 py-10">
+    <div className="px-5 py-4 md:px-20 md:py-10">
       <Outlet />
     </div>
     </>

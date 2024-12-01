@@ -47,14 +47,15 @@ if(loading){
 }
   return (
     <>
-          <div className="mb-4">
-           <h1 className="font-bold text-3xl">
-            {data.input}
-           </h1>
+          <div className="mb-2 ">
+              <p className='text-3xl font-bold'>Promt :</p>
+            <h1 className="font-bold text-2xl text-slate-800">
+              {data.input}
+            </h1>
 
-           <div className="py-10">
-            <MarkdownMessage output={data.output} />
-           </div>
+            <div className="py-1">
+              <MarkdownMessage output={data.output} />
+            </div>
           </div>
     </>
   )
