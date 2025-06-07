@@ -9,9 +9,18 @@ const express = require("express")
 const app = express()
 const PORT = process.env.PORT || 2300
 
+const corsOptions = {
+  origin: "https://code-mate-ai.vercel.app",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
+
+
 connectDb()
 app.use(bodyparser.json());
-app.use(cors())
 app.use('/api/v1/', router)
 
 app.listen(PORT, () => {
