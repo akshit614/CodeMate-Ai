@@ -4,7 +4,7 @@ const api_Key =  process.env.API_KEY;
 const genAi = new GoogleGenerativeAI(api_Key)
 
 const geminiModel = genAi.getGenerativeModel({
-    model : "gemini-1.5-flash"
+    model : "gemini-2.0-flash"
 })
 
 module.exports = {
